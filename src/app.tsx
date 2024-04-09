@@ -1,3 +1,5 @@
+import { Tasks } from "./components/tasks_/tasks";
+
 export function App() {
-  return <h1>Hello World!</h1>;
+  return <Tasks />;
 }
