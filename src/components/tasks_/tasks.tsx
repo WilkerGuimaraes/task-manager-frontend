@@ -5,6 +5,7 @@ import {
   LastTaskContainer,
   TaskContainer,
 } from "./tasks.style";
+import { TaskItem } from "../task-item_/task-item";
 
 interface TasksProps {
   id: string;
@@ -44,7 +45,7 @@ export function Tasks() {
         <h3>Últimas tarefas</h3>
         <div className="last-tasks-list">
           {lastTasks.map((lastTask) => (
-            <p>{lastTask.description}</p>
+            <TaskItem key={lastTask.id} task={lastTask} />
           ))}
         </div>
       </LastTaskContainer>
@@ -53,7 +54,7 @@ export function Tasks() {
         <h3>Tarefas Concluídas</h3>
         <div className="completed-tasks-list">
           {copmletedTasks.map((completedTask) => (
-            <p>{completedTask.description}</p>
+            <TaskItem key={completedTask.id} task={completedTask} />
           ))}
         </div>
       </CompletedTaskContainer>
