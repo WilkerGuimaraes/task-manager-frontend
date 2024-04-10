@@ -6,6 +6,7 @@ import {
   TaskContainer,
 } from "./tasks.style";
 import { TaskItem } from "../task-item_/task-item";
+import { AddTask } from "../add-task_/add-task";
 
 interface TasksProps {
   id: string;
@@ -43,6 +44,7 @@ export function Tasks() {
 
       <LastTaskContainer>
         <h3>Últimas tarefas</h3>
+        <AddTask fetchTasks={fetchTasks} />
         <div className="last-tasks-list">
           {lastTasks.map((lastTask) => (
             <TaskItem key={lastTask.id} task={lastTask} />

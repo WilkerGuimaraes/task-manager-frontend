@@ -1,7 +1,7 @@
 import { CustomButtomStyle } from "./custom-button.style";
 
 interface CustomButtonProps {
-  children: string;
+  children: any;
   onClick: () => void;
 }
 
