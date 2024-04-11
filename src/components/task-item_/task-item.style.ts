@@ -75,7 +75,7 @@ export const Checkmark = styled.span<TaskProp>`
   }
 
   ${CheckboxLabel} input:checked ~ & {
-    background: linear-gradient(262.71deg, #00d1ff -30.04%, #00ffa3 124.74%);
+    background: linear-gradient(262.71deg, #ea580c -30.04%, #9a3412 124.74%);
   }
 
   ${(props) =>
