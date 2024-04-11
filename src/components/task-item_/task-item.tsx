@@ -18,6 +18,16 @@ interface TaskItemProps {
 }
 
 export function TaskItem({ task, fetchTasks }: TaskItemProps) {
+  async function handleTaskDeletion() {
+    try {
+      await axios.delete(`http://localhost:3333/tasks/${task.id}`);
+
+      await fetchTasks();
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   async function handleTaskCompletionChange(e: ChangeEvent<HTMLInputElement>) {
     try {
       await axios.patch(`http://localhost:3333/tasks/${task.id}`, {
@@ -45,7 +55,7 @@ export function TaskItem({ task, fetchTasks }: TaskItemProps) {
       </TaskDescription>
 
       <div className="delete">
-        <AiFillDelete size={18} color="#f97474" />
+        <AiFillDelete size={18} color="#f97474" onClick={handleTaskDeletion} />
       </div>
     </TaskItemContainer>
   );
