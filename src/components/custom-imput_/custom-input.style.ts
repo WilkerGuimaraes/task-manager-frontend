@@ -18,13 +18,13 @@ export const CustomInputContainer = styled.div`
 
     &:focus {
       outline: none;
-      border-bottom: 1px solid #00ffa3;
+      border-bottom: 1px solid #ea580c;
     }
 
     &:focus ~ .custom-input-label {
       top: -14px;
       font-size: 12px;
-      color: #00ffa3;
+      color: #ea580c;
     }
   }
 
