@@ -47,7 +47,11 @@ export function Tasks() {
         <AddTask fetchTasks={fetchTasks} />
         <div className="last-tasks-list">
           {lastTasks.map((lastTask) => (
-            <TaskItem key={lastTask.id} task={lastTask} />
+            <TaskItem
+              key={lastTask.id}
+              task={lastTask}
+              fetchTasks={fetchTasks}
+            />
           ))}
         </div>
       </LastTaskContainer>
@@ -56,7 +60,11 @@ export function Tasks() {
         <h3>Tarefas Concluídas</h3>
         <div className="completed-tasks-list">
           {copmletedTasks.map((completedTask) => (
-            <TaskItem key={completedTask.id} task={completedTask} />
+            <TaskItem
+              key={completedTask.id}
+              task={completedTask}
+              fetchTasks={fetchTasks}
+            />
           ))}
         </div>
       </CompletedTaskContainer>
