@@ -1,9 +1,12 @@
 import { ChangeEvent, useState } from "react";
 import { FaPlus } from "react-icons/fa";
 import axios from "axios";
+import { Zoom, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import { CustomInput } from "../custom-imput_/custom-input";
 import { CustomButtom } from "../custom-buttom_/custom-button";
+
 import { AddTaskContainer } from "./add-task.style";
 
 interface AddTaskProps {
@@ -19,7 +22,22 @@ export function AddTask({ fetchTasks }: AddTaskProps) {
 
   async function handleTaskAddition() {
     try {
-      if (task.length === 0) return;
+      if (task.length === 0) {
+        return toast.error(
+          "A tarefa precisa de uma descrição para ser adicionada.",
+          {
+            position: "bottom-center",
+            autoClose: 2500,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Zoom,
+          }
+        );
+      }
 
       await axios.post("http://localhost:3333/tasks", {
         description: task,
@@ -29,6 +47,18 @@ export function AddTask({ fetchTasks }: AddTaskProps) {
       await fetchTasks();
 
       setTasks("");
+
+      toast.success("A tarefa foi adicionada com sucesso!", {
+        position: "bottom-center",
+        autoClose: 2500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Zoom,
+      });
     } catch (error) {
       console.log(error);
     }

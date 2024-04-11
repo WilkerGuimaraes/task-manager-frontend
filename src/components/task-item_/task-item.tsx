@@ -1,12 +1,15 @@
 import axios from "axios";
+import { AiFillDelete } from "react-icons/ai";
+import { ChangeEvent } from "react";
+import { Zoom, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import {
   CheckboxLabel,
   Checkmark,
   TaskDescription,
   TaskItemContainer,
 } from "./task-item.style";
-import { AiFillDelete } from "react-icons/ai";
-import { ChangeEvent } from "react";
 
 interface TaskItemProps {
   task: {
@@ -23,6 +26,18 @@ export function TaskItem({ task, fetchTasks }: TaskItemProps) {
       await axios.delete(`http://localhost:3333/tasks/${task.id}`);
 
       await fetchTasks();
+
+      toast.success("A tarefa foi removida com sucesso!", {
+        position: "bottom-center",
+        autoClose: 2500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Zoom,
+      });
     } catch (error) {
       console.log(error);
     }
@@ -35,6 +50,18 @@ export function TaskItem({ task, fetchTasks }: TaskItemProps) {
       });
 
       await fetchTasks();
+
+      toast.success("A tarefa foi modificada com sucesso!", {
+        position: "bottom-center",
+        autoClose: 2500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Zoom,
+      });
     } catch (error) {
       console.log(error);
     }
