@@ -6,7 +6,7 @@ export const CustomInputContainer = styled.div`
 
   input {
     background: none;
-    color: #666;
+    color: #f7f7f7;
     font-size: 18px;
     padding: 10px 10px 10px 5px;
     display: block;

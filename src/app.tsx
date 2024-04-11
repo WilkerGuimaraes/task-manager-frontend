@@ -1,23 +1,11 @@
-import { Tasks } from "./components/tasks_/tasks";
+import { Route, Routes } from "react-router-dom";
 
-import { ToastContainer } from "react-toastify";
+import { Home } from "./pages/home.page";
 
 export function App() {
   return (
-    <div>
-      <ToastContainer
-        position="bottom-center"
-        autoClose={2500}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      />
-      <Tasks />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
   );
 }
