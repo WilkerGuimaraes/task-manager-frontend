@@ -6,7 +6,7 @@
 
 ![home_page](https://imgur.com/HaDgaBb.png)
 
-# Geranciador de tarefas
+# Gerenciador de tarefas
 
 ## 📃 Descrição
 
