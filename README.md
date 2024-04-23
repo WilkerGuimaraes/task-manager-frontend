@@ -1,10 +1,4 @@
-## Welcome Page
-
-![welcome_page](https://imgur.com/qNGbhML.png)
-
-## Home Page
-
-![home_page](https://imgur.com/HaDgaBb.png)
+https://github.com/WilkerGuimaraes/task-manager-frontend/assets/141461291/7da99ddb-3619-47ec-948b-b7a1529d0a5e
 
 # Gerenciador de tarefas
 
