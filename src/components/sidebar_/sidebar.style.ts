@@ -11,6 +11,10 @@ export const SidebarContainer = styled.div`
   padding: 56px 28px;
   position: relative;
 
+  @media (max-width: 1024px) {
+    display: none;
+  }
+
   .sign-out {
     position: absolute;
     bottom: 0;

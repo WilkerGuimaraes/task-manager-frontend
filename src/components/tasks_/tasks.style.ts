@@ -9,6 +9,15 @@ export const TaskContainer = styled.div`
   overflow: hidden;
   flex: auto;
 
+  @media (max-width: 1280px) {
+    max-width: 60%;
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px;
+    max-width: 100%;
+  }
+
   h2 {
     margin-bottom: 24px;
   }
