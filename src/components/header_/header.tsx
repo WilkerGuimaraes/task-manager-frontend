@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import { SidebarContainer } from "./sidebar.style";
+
 import { CustomButtom } from "../custom-buttom_/custom-button";
 
-export function SideBar() {
+import { HeaderContainer } from "./header.style";
+
+export function Header() {
   const navigate = useNavigate();
 
   function handleSignOutClick() {
@@ -10,12 +12,12 @@ export function SideBar() {
   }
 
   return (
-    <SidebarContainer>
+    <HeaderContainer>
       <h2>Gerenciador de tarefas</h2>
 
       <div className="sign-out">
         <CustomButtom onClick={handleSignOutClick}>Sair</CustomButtom>
       </div>
-    </SidebarContainer>
+    </HeaderContainer>
   );
 }

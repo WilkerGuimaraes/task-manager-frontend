@@ -1,12 +1,11 @@
-import { SideBar } from "../../components/sidebar_/sidebar";
-import { Tasks } from "../../components/tasks_/tasks";
-
 import { ToastContainer } from "react-toastify";
-import { HomeContainer } from "./home.page.style";
+
+import { Tasks } from "../../components/tasks_/tasks";
+import { Header } from "../../components/header_/header";
 
 export function Home() {
   return (
-    <HomeContainer>
+    <div>
       <ToastContainer
         position="bottom-center"
         autoClose={2500}
@@ -19,8 +18,8 @@ export function Home() {
         pauseOnHover
         theme="dark"
       />
-      <SideBar />
+      <Header />
       <Tasks />
-    </HomeContainer>
+    </div>
   );
 }

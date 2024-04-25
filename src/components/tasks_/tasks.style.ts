@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const TaskContainer = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 40%;
+  max-width: 50%;
   height: 100vh;
   padding: 60px 85px;
   overflow: hidden;
