@@ -1,4 +1,4 @@
-https://github.com/WilkerGuimaraes/task-manager-frontend/assets/141461291/7da99ddb-3619-47ec-948b-b7a1529d0a5e
+https://github.com/WilkerGuimaraes/task-manager-frontend/assets/141461291/268e8f4f-bcf2-45a5-9a94-5de7dc81d177
 
 # Gerenciador de tarefas
 
